@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Products | PodStore Electronics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== HEADER (SAME AS OTHER PAGES) ===== -->
+<header class="header">
+  <div class="header-inner1">
+
+    <div class="brand1">
+      <img src="images/podstore-logo-white.png"
+           alt="PodStore Electronics"
+           class="brand-logo">
+    </div>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="How.html">How to order</a>
+      <a href="terms.html">T&amp;C</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- ===== INTRO ===== -->
+<section class="section light">
+  <h2 class="section-title">Our Products</h2>
+  <p class="text">
+    Carefully restored Apple iPods with modern upgrades.
+    Choose your configuration and enjoy a distraction-free
+    music experience.
+  </p>
+</section>
+
+<!-- ===== CLASSIC SERIES ===== -->
+<section class="section">
+  <h2 class="section-title">iPod Classic</h2>
+
+  <div class="products-grid">
+
+    <!-- iPod Classic 5th -->
+    <div class="product-card">
+      <img src="images/ipod5.jpg" alt="iPod Classic 5th Gen">
+
+      <h3>iPod Classic 5th Gen</h3>
+
+      <p class="text">
+        Warm Wolfson DAC sound signature, preferred by audiophiles.
+      </p>
+
+      <label>Storage</label>
+      <select id="s5" onchange="calc5()">
+        <option value="13500">64GB</option>
+        <option value="14500">128GB</option>
+        <option value="16500">256GB</option>
+        <option value="19500">512GB</option>
+      </select>
+
+      <label>Bluetooth</label>
+      <select id="b5" onchange="calc5()">
+        <option value="0">None</option>
+        <option value="4500">Standard</option>
+        <option value="5500">Hi-Res</option>
+      </select>
+
+      <label>Battery</label>
+      <select id="bat5" onchange="calc5()">
+        <option value="0">Standard</option>
+        <option value="2200">2000mAh</option>
+        <option value="3200">3000mAh</option>
+      </select>
+
+      <label>Housing</label>
+      <select id="h5" onchange="calc5()">
+        <option value="0">Original</option>
+        <option value="4300">New Housing</option>
+      </select>
+
+      <label class="check">
+        <input type="checkbox" id="t5" onchange="calc5()">
+        Taptic Engine (+₹3500)
+      </label>
+
+      <div class="price">
+        ₹ <span id="total5">13500</span>
+      </div>
+
+      <button class="btn" onclick="order5()">Order Now</button>
+    </div>
+
+    <!-- iPod Classic 7th -->
+    <div class="product-card">
+      <img src="images/ipod7.jpg" alt="iPod Classic 7th Gen">
+
+      <h3>iPod Classic 7th Gen</h3>
+
+      <p class="text">
+        Final Classic generation with refined hardware and efficiency.
+      </p>
+
+      <label>Storage</label>
+      <select id="s7" onchange="calc7()">
+        <option value="14000">64GB</option>
+        <option value="16000">128GB</option>
+        <option value="18000">256GB</option>
+        <option value="21000">512GB</option>
+      </select>
+
+      <label>Bluetooth</label>
+      <select id="b7" onchange="calc7()">
+        <option value="0">None</option>
+        <option value="4500">Standard</option>
+        <option value="5500">Hi-Res</option>
+      </select>
+
+      <label>Battery</label>
+      <select id="bat7" onchange="calc7()">
+        <option value="0">Standard</option>
+        <option value="2200">2000mAh</option>
+        <option value="3200">3000mAh</option>
+      </select>
+
+      <label>Housing</label>
+      <select id="h7" onchange="calc7()">
+        <option value="0">Original</option>
+        <option value="4300">New Housing</option>
+      </select>
+
+      <label class="check">
+        <input type="checkbox" id="t7" onchange="calc7()">
+        Taptic Engine (+₹3500)
+      </label>
+
+      <div class="price">
+        ₹ <span id="total7">14000</span>
+      </div>
+
+      <button class="btn" onclick="order7()">Order Now</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== NANO SERIES ===== -->
+<section class="section light">
+  <h2 class="section-title">iPod Nano</h2>
+
+  <div class="products-grid">
+
+    <div class="product-card simple">
+      <img src="images/nano3.jpg">
+      <h3>Nano 3rd Gen</h3>
+      <div class="price">₹ 4,500</div>
+      <button class="btn"
+        onclick="orderNano('iPod Nano 3rd Gen','₹4,500')">Order Now</button>
+    </div>
+
+    <div class="product-card simple">
+      <img src="images/nano5.jpg">
+      <h3>Nano 5th Gen</h3>
+      <div class="price">₹ 5,500</div>
+      <button class="btn"
+        onclick="orderNano('iPod Nano 5th Gen','₹5,500')">Order Now</button>
+    </div>
+
+    <div class="product-card simple">
+      <img src="images/nano6.jpg">
+      <h3>Nano 6th Gen</h3>
+      <div class="price">₹ 6,500</div>
+      <button class="btn"
+        onclick="orderNano('iPod Nano 6th Gen','₹6,500')">Order Now</button>
+    </div>
+
+    <div class="product-card simple">
+      <img src="images/nano7.jpg">
+      <h3>Nano 7th Gen</h3>
+      <div class="price">₹ 7,500</div>
+      <button class="btn"
+        onclick="orderNano('iPod Nano 7th Gen','₹7,500')">Order Now</button>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  © PodStore Electronics • Chennai, Tamil Nadu
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
