@@ -879,3 +879,102 @@ body {
 .page-start {
   padding-top: 64px; /* same as header-inner height */
 }
+
+/* ==========================================
+   MOBILE RESPONSIVENESS OVERRIDE 
+   (Adds to your existing code without changing it)
+   ========================================== */
+
+@media (max-width: 900px) {
+  /* 1. Fix Header & Logo Overlap */
+  .header-inner, .header-inner1 {
+    height: auto;
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .brand {
+    height: auto;
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  .brand-logo {
+    position: relative; /* Removes the absolute overlap */
+    left: 0;
+    top: 0;
+    transform: none;
+    height: 60px; /* Scaled for mobile */
+    margin: 0 auto;
+  }
+
+  /* 2. Fix Navigation Spacing */
+  .nav {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav a {
+    margin-right: 0;
+    font-size: 13px;
+  }
+
+  /* 3. Transform Side-by-Side Layouts to Stacked */
+  .hero-container, 
+  .about-container, 
+  .steps-container {
+    grid-template-columns: 1fr !important; /* Forces single column */
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  /* 4. Center Hero & About Text */
+  .hero-text, 
+  .about-text, 
+  .steps-text {
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  /* 5. Fix Image Positioning */
+  .hero-image img, 
+  .about-image img, 
+  .steps-image img {
+    margin: 20px auto 0 !important;
+    max-width: 280px; /* Fits better on small screens */
+    transform: none !important; /* Removes the desktop Y-offset */
+  }
+
+  /* 6. Fix Sections Leakage */
+  .section {
+    margin: 20px 10px;
+    padding: 25px 15px;
+  }
+
+  /* 7. Bullet Alignment for Mobile */
+  .hero-points .step-item {
+    justify-content: center;
+  }
+
+  /* 8. Spacing for "Why PodStore" Section */
+  .section.light {
+    margin-top: 40px; /* Reduced from 150px for mobile flow */
+  }
+}
+
+/* Extra fix for very small screens */
+@media (max-width: 400px) {
+  .hero-buttons {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}
