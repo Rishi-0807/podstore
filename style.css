@@ -1008,3 +1008,30 @@ body {
     max-width: 280px;             /* mobile-friendly size */
   }
 }
+
+/* ================= FORCE ABOUT PAGE MOBILE ================= */
+@media screen and (max-width: 768px) {
+
+  .about-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 24px !important;
+  }
+
+  .about-text {
+    width: 100% !important;
+  }
+
+  .about-image {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .about-image img {
+    max-width: 260px !important;
+    height: auto !important;
+  }
+}
