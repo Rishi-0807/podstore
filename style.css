@@ -978,3 +978,33 @@ body {
     width: 100%;
   }
 }
+
+/* ================= ABOUT PAGE MOBILE FIX ================= */
+
+@media (max-width: 900px) {
+
+  .about-container {
+    grid-template-columns: 1fr;   /* single column */
+    gap: 30px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .about-text {
+    order: 1;                     /* text first */
+  }
+
+  .about-image {
+    order: 2;                     /* image below */
+  }
+
+  .about-text p {
+    font-size: 14.5px;
+    line-height: 1.7;
+  }
+
+  .about-image img {
+    margin: 0 auto;               /* center image */
+    max-width: 280px;             /* mobile-friendly size */
+  }
+}
