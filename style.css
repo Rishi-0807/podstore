@@ -1065,3 +1065,55 @@ body {
     grid-template-columns: 1fr;  /* mobile stays stacked */
   }
 }
+
+/* =====================================================
+   PRODUCT QUICK VIEW MODAL
+   ===================================================== */
+
+.product-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.product-modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: rgba(20,20,20,0.95);
+  width: 90%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+
+  border-radius: 18px;
+  padding: 24px;
+  position: relative;
+
+  box-shadow: 0 40px 90px rgba(0,0,0,0.7);
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #ff7a00;
+}
+
+/* Modal spacing cleanup */
+.modal-content label {
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+.modal-content .price {
+  font-size: 26px;
+  margin-top: 20px;
+}
