@@ -1019,23 +1019,23 @@ body {
 
 /* ================= ABOUT PAGE – MOBILE FIX (CLEAN & STABLE) ================= */
 
+/* ================= ABOUT PAGE – MATCH STEPS PAGE ON MOBILE ================= */
+
 @media (max-width: 900px) {
 
-  /* Match Steps page behavior */
   .about-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 32px;
-
+    display: block;          /* same as steps behavior */
     max-width: 100%;
     padding: 20px;
-
     text-align: center;
   }
 
-  /* Text block */
   .about-text {
     max-width: 100%;
+  }
+
+  .about-text h2 {
+    text-align: center;
   }
 
   .about-text p {
@@ -1044,20 +1044,17 @@ body {
     margin-bottom: 14px;
   }
 
-  /* Image block */
   .about-image {
+    margin-top: 24px;
     display: flex;
     justify-content: center;
   }
 
   .about-image img {
+    max-width: 260px;
     width: 100%;
-    max-width: 280px;
     height: auto;
-
     margin: 0 auto;
-    border-radius: 14px;
-
-    transform: none;          /* remove desktop lift */
+    transform: none;
   }
 }
