@@ -66,3 +66,33 @@ document.addEventListener("DOMContentLoaded", () => {
     el.style.transform = "translateY(0)";
   });
 });
+
+/* ================= HERO IMAGE ROTATION ================= */
+
+const heroImages = [
+  "images/ipod-hero.png",     // existing (default)
+  "images/ipod-hero-1.png",
+  "images/ipod-hero-2.png",
+  "images/ipod-hero-3.png"
+];
+
+let heroIndex = 0;
+const heroImg = document.getElementById("heroImage");
+
+if (heroImg) {
+  setInterval(() => {
+    heroImg.classList.add("fade-out");
+
+    setTimeout(() => {
+      heroIndex = (heroIndex + 1) % heroImages.length;
+      heroImg.src = heroImages[heroIndex];
+      heroImg.classList.remove("fade-out");
+      heroImg.classList.add("fade-in");
+    }, 600);
+
+    setTimeout(() => {
+      heroImg.classList.remove("fade-in");
+    }, 1200);
+
+  }, 3500); // change image every 3.5 seconds
+}
