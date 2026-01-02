@@ -513,21 +513,29 @@ body {
 
 /* ===== ABOUT PAGE SPLIT LAYOUT ===== */
 
+/* ===== ABOUT PAGE – FINAL STABLE LAYOUT ===== */
+
 .about-container {
   max-width: 1100px;
   margin: auto;
 
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 60px;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 60px;
 }
 
-.about-text p {
-  line-height: 1.7;
-  margin-bottom: 16px;
-  color: #b5b5b5;
+
+.about-text {
+  flex: 1;
 }
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
 
 .about-image img {
   width: 100%;
