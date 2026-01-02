@@ -685,7 +685,6 @@ body {
 }
 
 /* Prevent layout leakage */
-.about-container,
 .steps-container {
   flex: unset;
 }
@@ -952,49 +951,33 @@ body {
   }
 }
 
-/* =========================================================
-   FORCE ABOUT PAGE TO MATCH STEPS PAGE (MOBILE ONLY)
-   DO NOT EDIT ABOVE THIS
-   ========================================================= */
-
+/* ===== ABOUT PAGE MOBILE – FINAL OVERRIDE ===== */
 @media (max-width: 900px) {
 
-  /* 1. Kill desktop grid for About */
-  .about-section .about-container {
-    display: block !important;
-    width: 100% !important;
+  .about-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 24px !important;
     padding: 20px !important;
     text-align: center !important;
   }
 
-  /* 2. Force text full width */
-  .about-section .about-text {
+  .about-text {
     width: 100% !important;
-    max-width: 100% !important;
   }
 
-  /* 3. Normalize paragraph sizing */
-  .about-section .about-text p {
-    font-size: 14.5px !important;
-    line-height: 1.7 !important;
-    margin-bottom: 14px !important;
-  }
-
-  /* 4. Force image BELOW text */
-  .about-section .about-image {
+  .about-image {
+    width: 100% !important;
     display: flex !important;
     justify-content: center !important;
-    margin-top: 24px !important;
-    width: 100% !important;
   }
 
-  /* 5. Lock image size like Steps page */
-  .about-section .about-image img {
-    width: 100% !important;
-    max-width: 260px !important;
-    height: auto !important;
+  .about-image img {
     margin: 0 auto !important;
-    transform: none !important;
+    max-width: 260px !important;
+    width: 100% !important;
+    height: auto !important;
   }
 }
 
