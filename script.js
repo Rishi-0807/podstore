@@ -71,7 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const heroImages = [
   "images/ipod-hero.png",     // existing (default)
-  "images/ipod-hero-1.png",
   "images/ipod-hero-2.png",
   "images/ipod-hero-3.png"
 ];
