@@ -984,3 +984,84 @@ body {
   }
 }
 
+/* =====================================================
+   🟧 PRODUCT PAGE OPTIMISATION (DESKTOP FIRST)
+   ===================================================== */
+
+/* Fix ugly background repaint on scroll */
+body {
+  background-attachment: fixed;
+}
+
+/* ---------- PRODUCT GRID (DESKTOP) ---------- */
+@media (min-width: 901px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);  /* 3-column desktop */
+    gap: 32px;
+    align-items: stretch;
+  }
+}
+
+/* ---------- PRODUCT CARD REFINEMENT ---------- */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 22px;
+  border-radius: 16px;
+
+  background: rgba(0,0,0,0.55);
+}
+
+/* Reduce visual height */
+.product-card p.text {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* Group options visually */
+.product-card label {
+  font-size: 13px;
+  margin-top: 10px;
+  opacity: 0.85;
+}
+
+.product-card select {
+  margin-top: 4px;
+}
+
+/* Checkbox spacing */
+.product-card .check {
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+/* Price emphasis */
+.product-card .price {
+  margin-top: 18px;
+  font-size: 24px;
+  color: #ff8c1a;
+}
+
+/* Button separation */
+.product-card .btn {
+  margin-top: 14px;
+}
+
+/* ---------- SIMPLE NANO CARDS ---------- */
+.product-card.simple {
+  text-align: center;
+}
+
+.product-card.simple img {
+  height: 160px;
+}
+
+/* ---------- MOBILE SAFETY (NO BREAKAGE) ---------- */
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: 1fr;  /* mobile stays stacked */
+  }
+}
