@@ -1023,4 +1023,35 @@ body {
   }
 }
 
+/* ===== ABOUT PAGE – REAL MOBILE FIX (GRID OVERRIDE) ===== */
+@media (max-width: 900px) {
+
+  .about-container {
+    display: grid !important;
+    grid-template-columns: 1fr !important;   /* 🔑 THIS IS THE KEY */
+    grid-template-rows: auto auto !important;
+    gap: 24px !important;
+    padding: 20px !important;
+    text-align: center !important;
+  }
+
+  .about-text {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+  }
+
+  .about-image {
+    grid-column: 1 / -1 !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .about-image img {
+    margin: 0 auto !important;
+    max-width: 260px !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
 
