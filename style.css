@@ -1058,3 +1058,36 @@ body {
     transform: none;
   }
 }
+
+/* ================= ABOUT PAGE – MOBILE (MATCH STEPS PAGE) ================= */
+
+@media (max-width: 900px) {
+
+  .about-container {
+    display: block;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-text p {
+    font-size: 14.5px;
+    line-height: 1.7;
+  }
+
+  .about-image {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-image img {
+    max-width: 260px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
