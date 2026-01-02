@@ -1091,3 +1091,8 @@ body {
     margin: 0 auto;
   }
 }
+
+/* ===== CSS LOAD TEST ===== */
+body {
+  border: 10px solid red !important;
+}
