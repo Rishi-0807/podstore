@@ -977,5 +977,50 @@ body {
   }
 }
 
+/* ===== MOBILE VIEWPORT HARD FIX ===== */
+@media (max-width: 900px) {
+
+  body {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .section {
+    max-width: 100% !important;
+    margin: 20px 10px !important;
+  }
+
+  .header-inner {
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .about-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 24px !important;
+    width: 100% !important;
+  }
+
+  .about-image {
+    order: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-text {
+    order: 1;
+    width: 100%;
+  }
+
+  .about-image img {
+    max-width: 260px !important;
+    margin: 0 auto !important;
+  }
+}
 
 
