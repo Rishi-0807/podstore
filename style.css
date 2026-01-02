@@ -930,3 +930,57 @@ body {
   }
 }
 
+/* =====================================================
+   🔒 FINAL MOBILE LOCK — DO NOT MOVE THIS BLOCK
+   ===================================================== */
+@media screen and (max-width: 900px) {
+
+  /* FORCE HOME HERO STACK */
+  .hero-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 24px !important;
+    padding: 32px 16px !important;
+  }
+
+  .hero-text {
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+
+  .hero-buttons {
+    justify-content: center !important;
+  }
+
+  .hero-image img {
+    max-width: 260px !important;
+    margin: 0 auto !important;
+    transform: none !important;
+  }
+
+  /* FORCE ABOUT PAGE STACK */
+  .about-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 24px !important;
+  }
+
+  .about-text {
+    width: 100% !important;
+  }
+
+  .about-image {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .about-image img {
+    max-width: 260px !important;
+    margin: 0 auto !important;
+  }
+}
+
