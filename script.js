@@ -66,21 +66,3 @@ document.addEventListener("DOMContentLoaded", () => {
     el.style.transform = "translateY(0)";
   });
 });
-
-function openModal(button) {
-  const card = button.closest('.product-card');
-  const modal = document.getElementById('productModal');
-  const modalBody = document.getElementById('modalBody');
-
-  modalBody.innerHTML = card.innerHTML;
-
-  // Replace button inside modal
-  const btn = modalBody.querySelector('.btn');
-  btn.innerText = 'Order Now';
-
-  modal.classList.add('active');
-}
-
-function closeModal() {
-  document.getElementById('productModal').classList.remove('active');
-}
