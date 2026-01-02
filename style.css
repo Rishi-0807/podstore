@@ -486,19 +486,6 @@ body {
 }
 
 
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 900px) {
-  .hero-container,
-  .steps-container {
-    grid-template-columns: 1fr !important;
-    padding: 30px 20px;
-    text-align: center;
-  }
-}
-
-
 :root {
   --accent: #ff8c1a;
 }
@@ -1053,9 +1040,7 @@ body {
   }
 }
 
-/* ================= ABOUT PAGE – MOBILE (MATCH STEPS PAGE) ================= */
-
-/* ===== ABOUT PAGE – MOBILE FINAL FIX ===== */
+/* ===== ABOUT PAGE MOBILE – FINAL WORKING FIX ===== */
 
 @media (max-width: 900px) {
 
@@ -1065,6 +1050,10 @@ body {
     text-align: center;
   }
 
+  .about-text {
+    max-width: 100%;
+  }
+
   .about-image {
     margin-top: 24px;
     display: flex;
@@ -1072,8 +1061,10 @@ body {
   }
 
   .about-image img {
-    max-width: 260px;
     width: 100%;
+    max-width: 260px;
     margin: 0 auto;
+    height: auto;
   }
 }
+
