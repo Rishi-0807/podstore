@@ -998,3 +998,41 @@ img {
     padding: 24px;
   }
 }
+
+/* ================= PREMIUM REVIEWS FORMAT ================= */
+
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.premium-review {
+  background: linear-gradient(
+    145deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.02)
+  );
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 32px;
+  border-radius: 18px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.premium-review:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 70px rgba(0,0,0,0.65);
+}
+
+.premium-review .stars {
+  color: #18f0c6;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.premium-review p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #e0e0e0;
+
+}
