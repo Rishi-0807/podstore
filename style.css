@@ -6,6 +6,10 @@
   font-family: "Inter", sans-serif;
 }
 
+html {
+  transform: none !important;
+}
+
 /* ========= GLOBAL BACKGROUND ========= */
 body {
   min-height: 100vh;
@@ -16,6 +20,7 @@ body {
   background-position: center;
   background-attachment: scroll;
   color: #f2f2f2;
+  transform: none !important;
 }
 
 /* ========= HEADER ========= */
@@ -118,6 +123,37 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
   gap: 30px;
   align-items: flex-start;
+}
+
+/* Classic grid centers and resizes with product count */
+#classicGrid {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
+  max-width: 1080px; /* roughly 3 cards + gaps; shrinks naturally for 1-2 cards */
+  margin: 0 auto;
+}
+
+#classicGrid .product-card {
+  width: 100%;
+  max-width: 420px;
+}
+
+/* Nano grid centers and resizes with product count - 5 in a row */
+#nanoGrid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
+  max-width: 1200px; /* roughly 5 cards + gaps; shrinks naturally for fewer cards */
+  margin: 0 auto;
+  gap: 24px;
+}
+
+#nanoGrid .product-card {
+  width: 100%;
+  max-width: 220px;
 }
 
 .product-card {
@@ -224,9 +260,9 @@ select {
 
 /* ========= WHATSAPP FLOAT (ALWAYS VISIBLE) ========= */
 .whatsapp-float {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
+  position: fixed !important;
+  right: 20px !important;
+  bottom: 20px !important;
 
   width: 56px;
   height: 56px;
@@ -237,7 +273,7 @@ select {
   align-items: center;
   justify-content: center;
 
-  z-index: 10000; /* MUST be very high */
+  z-index: 10000 !important; /* MUST be very high */
 
   box-shadow: 0 12px 30px rgba(0,0,0,0.6);
 }
@@ -406,6 +442,9 @@ body {
 }
 
 .whatsapp-float {
+  position: fixed !important;
+  right: 20px !important;
+  bottom: 20px !important;
   animation: whatsappPop 0.6s var(--ease-apple);
 }
 
