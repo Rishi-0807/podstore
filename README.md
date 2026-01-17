@@ -41,3 +41,15 @@ It focuses on providing a clean, simple, and user-friendly interface for custome
 
 ## 📁 Folder Structure
 
+podstore/
+├── images/ # iPod images and assets
+├── index.html # Home page
+├── about.html # About the store
+├── products.html # iPod products listing
+├── reviews.html # Customer reviews
+├── team.html # Team details
+├── terms.html # Terms & conditions
+├── style.css # Styling
+├── script.js # JavaScript logic
+├── package.json
+└── package-lock.json
