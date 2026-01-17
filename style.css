@@ -260,51 +260,31 @@ select {
 
 /* ========= WHATSAPP FLOAT (ALWAYS VISIBLE) ========= */
 .whatsapp-float {
-  position: fixed !important;
-  right: 20px !important;
-  bottom: 20px !important;
-
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
   width: 56px;
   height: 56px;
   border-radius: 50%;
   background: #25D366;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  z-index: 10000 !important; /* MUST be very high */
-
+  z-index: 9999;
   box-shadow: 0 12px 30px rgba(0,0,0,0.6);
-}
-
-/* Fix stacking so WhatsApp floats above hero */
-.header,
-.hero,
-.home {
-  position: relative;
-  z-index: 1;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .whatsapp-float:hover {
-  transform: scale(1.08);
-  box-shadow: 0 16px 40px rgba(37,211,102,0.6);
+  transform: scale(1.12);
+  box-shadow: 0 16px 40px rgba(37,211,102,0.8);
 }
-
-.whatsapp-float img {
-  width: 28px;
-  height: 28px;
-}
-
 
 .whatsapp-float img {
   width: 30px;
   height: 30px;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.08);
-  box-shadow: 0 10px 30px rgba(37,211,102,0.6);
+  display: block;
 }
 
 /* ========= IPOD THEME ENHANCEMENTS ========= */
@@ -439,22 +419,6 @@ body {
 
 .nav a:hover::after {
   width: 100%;
-}
-
-.whatsapp-float {
-  position: fixed !important;
-  right: 20px !important;
-  bottom: 20px !important;
-  animation: whatsappPop 0.6s var(--ease-apple);
-}
-
-@keyframes whatsappPop {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
 }
 
 /* ================= HERO SPLIT LAYOUT ================= */
