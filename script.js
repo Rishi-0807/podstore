@@ -289,16 +289,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-const heroImages = [
-  "images/ipod-hero.png",
-  "images/ipod-hero-2.png",
-  "images/ipod-hero-3.png"
-];
+document.addEventListener("DOMContentLoaded", () => {
+  const heroImages = [
+    "images/ipod-hero.png",
+    "images/ipod-hero-2.png",
+    "images/ipod-hero-3.png"
+  ];
 
-let heroIndex = 0;
-const heroImg = document.getElementById("heroImage");
+  let heroIndex = 0;
+  const heroImg = document.getElementById("heroImage");
 
-if (heroImg) {
+  if (!heroImg) return;
+
   setInterval(() => {
     heroImg.style.opacity = "0";
 
@@ -308,5 +310,4 @@ if (heroImg) {
       heroImg.style.opacity = "1";
     }, 600);
   }, 3500);
-}
-
+});
