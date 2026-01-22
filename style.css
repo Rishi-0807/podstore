@@ -1045,3 +1045,49 @@ img {
   color: #e0e0e0;
 
 }
+
+/* ===== MODERN CATEGORY GRID ===== */
+
+.modern-category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.modern-category-card {
+  height: 180px;
+  border-radius: 18px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.modern-category-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0.25),
+    rgba(0,0,0,0.7)
+  );
+}
+
+.modern-category-card span {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.modern-category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 55px rgba(0,0,0,0.35);
+}
