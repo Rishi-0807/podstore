@@ -486,6 +486,7 @@ body {
 }
 
 
+<<<<<<< HEAD
 
 /* ================= MOBILE ================= */
 
@@ -505,6 +506,8 @@ body {
   }
 }
 
+=======
+>>>>>>> ea6b34a4757d5efd6d18bcd7c57c4967604eb4ae
 :root {
   --accent: #ff8c1a;
 }
@@ -530,6 +533,7 @@ body {
   text-decoration: none;
 }
 
+<<<<<<< HEAD
 /* ===== ABOUT PAGE SPLIT LAYOUT ===== */
 
 .about-container {
@@ -573,6 +577,8 @@ body {
   }
 }
 
+=======
+>>>>>>> ea6b34a4757d5efd6d18bcd7c57c4967604eb4ae
 /* ===== STEPS TO ORDER PAGE ===== */
 
 .steps-section {
@@ -712,7 +718,10 @@ body {
 }
 
 /* Prevent layout leakage */
+<<<<<<< HEAD
 .about-container,
+=======
+>>>>>>> ea6b34a4757d5efd6d18bcd7c57c4967604eb4ae
 .steps-container {
   flex: unset;
 }
