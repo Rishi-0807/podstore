@@ -87,7 +87,6 @@
   </div>
 </section>
 
-</section>
 
 <!-- OPTIONAL INFO SECTION -->
 <section class="section light reveal">
@@ -99,14 +98,21 @@
 </section>
 
 <footer class="footer">
-  © PodStore Electronics • Chennai, Tamil Nadu
+  © <span id="year"></span> PodStore Electronics • Chennai, Tamil Nadu
 </footer>
 <a href="https://wa.me/919003028687" 
    class="whatsapp-float" 
    target="_blank" 
    aria-label="Chat on WhatsApp">
+<<<<<<< HEAD
   <img src="images/whatsapp.svg" alt="WhatsApp">
+=======
+  <img src="images/WhatsApp.svg" alt="WhatsApp">
+>>>>>>> e8f538fdddd3fad3b2314f74ef3267d0fe1313fd
 </a>
 <script src="script.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>

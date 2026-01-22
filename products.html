@@ -34,6 +34,7 @@
 
 <main>
 
+<<<<<<< HEAD
   <section class="section light">
     <h2 class="section-title">Shop by Category</h2>
     <p class="text">
@@ -79,12 +80,30 @@
   </section>
 
 </main>
+=======
+  <div class="products-grid" id="classicGrid">
+    <!-- Cards injected by script.js for easy add/remove -->
+  </div>
+</section>
+
+<!-- ===== NANO SERIES ===== -->
+<section class="section light">
+  <h2 class="section-title">iPod Nano</h2>
+
+  <div class="products-grid" id="nanoGrid">
+    <!-- Cards injected by script.js for easy add/remove -->
+  </div>
+</section>
+>>>>>>> e8f538fdddd3fad3b2314f74ef3267d0fe1313fd
 
 <!-- ===== FOOTER (UNCHANGED) ===== -->
 <footer class="footer">
-  © PodStore Electronics • Chennai, Tamil Nadu
+  © <span id="year"></span> PodStore Electronics • Chennai, Tamil Nadu
 </footer>
 
 <script src="script.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
