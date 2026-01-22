@@ -238,7 +238,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderNanoGrid();
 });
 
-<<<<<<< HEAD
+
 
 /* ========= APPLE-STYLE INTERSECTION REVEAL ========= */
 
@@ -260,7 +260,6 @@ document.querySelectorAll(".reveal").forEach(el => {
   observer.observe(el);
 });
 
-=======
 /* ========= APPLE-STYLE SCROLL REVEAL ========= */
 
 const revealSelector = ".section, .product-card, .review-card";
@@ -318,4 +317,4 @@ if (heroImg) {
 
   }, 3500); // change image every 3.5 seconds
 }
->>>>>>> ea6b34a4757d5efd6d18bcd7c57c4967604eb4ae
+
