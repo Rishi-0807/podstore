@@ -900,84 +900,73 @@ img {
   backface-visibility: hidden;
 }
 
-/* ===== MODERN CATEGORY GRID (MASONRY STYLE) ===== */
+/* ===== EXACT CATEGORY GRID (LIKE IMAGE) ===== */
 
-.modern-category-grid {
+.exact-category-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 160px;
-  gap: 24px;
+  grid-auto-rows: 220px;
+  gap: 20px;
 }
 
-.modern-category-card {
+/* Base card */
+.exact-card {
   position: relative;
-  border-radius: 18px;
+  border-radius: 14px;
   background-size: cover;
   background-position: center;
   overflow: hidden;
   text-decoration: none;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.modern-category-card::after {
+/* Large cards (top row) */
+.exact-card.large {
+  grid-column: span 2;
+}
+
+/* Overlay */
+.exact-card::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(0,0,0,0.25),
-    rgba(0,0,0,0.75)
-  );
+  background: rgba(0,0,0,0.45);
 }
 
-.modern-category-card span {
+/* Text */
+.exact-card span {
   position: absolute;
-  left: 20px;
-  bottom: 20px;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 600;
   z-index: 1;
 }
 
-/* Hover effect */
-.modern-category-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 26px 60px rgba(0,0,0,0.35);
-}
-
-/* SIZE VARIANTS */
-.modern-category-card.large {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-.modern-category-card.wide {
-  grid-column: span 2;
-}
-
-.modern-category-card.tall {
-  grid-row: span 2;
+/* Hover */
+.exact-card:hover::before {
+  background: rgba(0,0,0,0.6);
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
-  .modern-category-grid {
+@media (max-width: 900px) {
+  .exact-category-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .exact-card.large {
+    grid-column: span 2;
   }
 }
 
-@media (max-width: 600px) {
-  .modern-category-grid {
+@media (max-width: 500px) {
+  .exact-category-grid {
     grid-template-columns: 1fr;
-    grid-auto-rows: 180px;
   }
 
-  .modern-category-card.large,
-  .modern-category-card.wide,
-  .modern-category-card.tall {
+  .exact-card.large {
     grid-column: span 1;
-    grid-row: span 1;
   }
 }
