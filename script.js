@@ -289,25 +289,29 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
+  if (!heroImg) return;
+  window.onload = function () {
+  const heroImg = document.getElementById("heroImage");
+
+  // Stop if hero image does not exist (other pages)
+  if (!heroImg) return;
+
   const heroImages = [
     "images/ipod-hero.png",
     "images/ipod-hero-2.png",
     "images/ipod-hero-3.png"
   ];
 
-  let heroIndex = 0;
-  const heroImg = document.getElementById("heroImage");
-
-  if (!heroImg) return;
+  let index = 0;
 
   setInterval(() => {
+    heroImg.style.transition = "opacity 0.6s ease-in-out";
     heroImg.style.opacity = "0";
 
     setTimeout(() => {
-      heroIndex = (heroIndex + 1) % heroImages.length;
-      heroImg.src = heroImages[heroIndex];
+      index = (index + 1) % heroImages.length;
+      heroImg.src = heroImages[index];
       heroImg.style.opacity = "1";
     }, 600);
   }, 3500);
-});
+};

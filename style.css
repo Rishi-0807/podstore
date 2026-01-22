@@ -997,3 +997,7 @@ img {
   opacity: 1;
   transform: scale(1);
 }
+
+.hero-image img {
+  opacity: 1;
+}
