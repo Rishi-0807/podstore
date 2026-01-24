@@ -1029,3 +1029,56 @@ body {
 body {
   animation: none;
 }
+
+/* ================= AKIS-STYLE HERO ================= */
+
+.akis-hero h1 {
+  font-size: clamp(44px, 8vw, 96px);
+  line-height: 1.05;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  max-width: 900px;
+  margin-bottom: 24px;
+}
+
+.akis-hero .hero-caption {
+  max-width: 420px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #9a9a9a;
+  margin-bottom: 40px;
+}
+
+/* Remove visual noise behind hero */
+.hero-container {
+  background: none !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+}
+
+/* Reduce hero padding for editorial look */
+.hero {
+  padding: 120px 0 80px;
+}
+
+/* Push image to background role */
+.hero-image img {
+  max-width: 340px;
+  opacity: 0.9;
+  box-shadow: none;
+}
+
+/* Mobile refinement */
+@media (max-width: 900px) {
+  .akis-hero h1 {
+    font-size: clamp(36px, 10vw, 56px);
+  }
+
+  .akis-hero {
+    text-align: left;
+  }
+
+  .hero {
+    padding: 80px 20px 60px;
+  }
+}
