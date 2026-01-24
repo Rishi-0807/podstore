@@ -278,22 +278,9 @@ const revealOnScroll = () => {
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
 
-/* ===== SIMPLE SAFE REVEAL (WORKS 100%) ===== */
-
+// ===== HERO IMAGE FADE FIX (WORKING) =====
 document.addEventListener("DOMContentLoaded", () => {
-  const items = document.querySelectorAll(".reveal");
-
-  items.forEach(el => {
-    el.style.opacity = 1;
-    el.style.transform = "translateY(0)";
-  });
-});
-
-  if (!heroImg) return;
-  window.onload = function () {
   const heroImg = document.getElementById("heroImage");
-
-  // Stop if hero image does not exist (other pages)
   if (!heroImg) return;
 
   const heroImages = [
@@ -305,13 +292,13 @@ document.addEventListener("DOMContentLoaded", () => {
   let index = 0;
 
   setInterval(() => {
-    heroImg.style.transition = "opacity 0.6s ease-in-out";
-    heroImg.style.opacity = "0";
+    heroImg.classList.add("fade-out");
 
     setTimeout(() => {
       index = (index + 1) % heroImages.length;
       heroImg.src = heroImages[index];
-      heroImg.style.opacity = "1";
+      heroImg.classList.remove("fade-out");
+      heroImg.classList.add("fade-in");
     }, 600);
   }, 3500);
-};
+});

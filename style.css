@@ -1030,3 +1030,18 @@ body {
   animation: none;
 }
 
+/* ===== HERO IMAGE ANIMATION FINAL FIX ===== */
+.hero-image img {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+.hero-image img.fade-out {
+  opacity: 0;
+  transform: scale(0.97);
+}
+
+.hero-image img.fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
