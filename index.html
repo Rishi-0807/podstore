@@ -1,98 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Podstore Electronics</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <meta charset="UTF-8">
+  <title>PodStore Electronics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ===== HEADER ===== -->
-<header class="site-header">
-  <div class="header-wrap">
-    <img src="assets/images/podstore-logo.svg" class="logo" alt="Podstore Electronics" />
+<header class="header">
+  <div class="header-inner">
+
+    <div class="brand">
+  <img src="images/podstore-logo-white.png" 
+       alt="PodStore Electronics" 
+       class="brand-logo">
+  
+</div>
+
 
     <nav class="nav">
-      <a href="#">Home</a>
-      <a href="#">Products</a>
-      <a href="#">Reviews</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="How.html">How to order</a>
+      <a href="terms.html">T&amp;C</a>
     </nav>
+
   </div>
 </header>
 
-<!-- ===== HERO ===== -->
-<section class="hero">
-  <div class="hero-wrap">
+
+<!-- ===== HOME ===== -->
+<!-- ===== HOME ===== -->
+<section id="home" class="home hero">
+  <div class="hero-container">
+
+    <!-- LEFT CONTENT -->
     <div class="hero-text">
-      <h1>Custom-Built<br>iPod Classics</h1>
+      <h1>Welcome to PodStore Electronics</h1>
+      <h2>Why iPod Classic Still Matters?</h2>
 
       <p>
-        Professionally restored and upgraded iPod Classics —
-        built for pure offline music listening.
+        In a world driven by streaming and constant notifications, the iPod
+        Classic represents a distraction-free, offline music experience.
+        No ads. No alerts. Just pure analog sound, physical controls, and music
+        stored entirely on your device.
       </p>
 
-      <div class="hero-actions">
-        <a href="#" class="btn primary">View Models</a>
-        <a href="https://wa.me/919003028687" class="btn ghost">WhatsApp Enquiry</a>
+      <!-- CLEAN POINTS (NO UL BREAKAGE) -->
+      <div class="hero-points">
+        <div class="step-item">
+          <span class="step-number">•</span>
+          <p>Genuine Components</p>
+        </div>
+
+        <div class="step-item">
+          <span class="step-number">•</span>
+          <p>SD Storage Upgrade</p>
+        </div>
+
+        <div class="step-item">
+          <span class="step-number">•</span>
+          <p>2 Months Warranty</p>
+        </div>
+
+        <div class="step-item">
+          <span class="step-number">•</span>
+          <p>Shipping Across India</p>
+        </div>
+      </div>
+
+      <!-- BUTTONS -->
+      <div class="hero-buttons">
+        <a href="products.html" class="btn">View Products</a>
+        <a href="reviews.html" class="btn secondary">Customer Reviews</a>
       </div>
     </div>
 
-    <div class="hero-media">
-      <img src="assets/images/ipod-hero.png" alt="iPod Classic" />
-    </div>
-  </div>
-</section>
-
-<!-- ===== TRUST STRIP ===== -->
-<section class="trust">
-  <div class="trust-wrap">
-    <span>SSD Storage</span>
-    <span>Battery Upgrade</span>
-    <span>Bluetooth Mod</span>
-    <span>2-Month Warranty</span>
-    <span>India-Wide Shipping</span>
-  </div>
-</section>
-
-<!-- ===== FEATURED PRODUCTS ===== -->
-<section class="section">
-  <div class="section-head">
-    <h2>Popular Builds</h2>
-    <p>Our most trusted configurations, chosen by buyers.</p>
-  </div>
-
-  <div class="product-grid">
-    <div class="product-card">
-      <img src="assets/images/ipod5.jpg" />
-      <h3>iPod Classic 5th Gen</h3>
-      <p>Warm Wolfson DAC sound, audiophile favorite.</p>
-      <a href="#" class="link">View Details →</a>
+    <!-- RIGHT IMAGE -->
+    <div class="hero-image">
+      <img src="images/ipod-hero.png" alt="iPod Classic Modified">
     </div>
 
-    <div class="product-card">
-      <img src="assets/images/ipod7.jpg" />
-      <h3>iPod Classic 7th Gen</h3>
-      <p>Final generation, refined and efficient.</p>
-      <a href="#" class="link">View Details →</a>
-    </div>
   </div>
 </section>
 
-<!-- ===== CTA ===== -->
-<section class="cta">
-  <h2>Need help choosing?</h2>
-  <p>Talk directly with us on WhatsApp and we’ll guide you.</p>
-  <a href="https://wa.me/919003028687" class="btn primary">Chat on WhatsApp</a>
+
+<!-- OPTIONAL INFO SECTION -->
+<section class="section light reveal">
+  <h2 class="section-title">Why PodStore Electronics ?</h2>
+
+  <p class="text">
+    PodStore Electronics is known for quick and clear responses, ensuring customers are supported at every step. We provide complete end-to-end assistance, from initial enquiry to after-service support. With a strong technical foundation and hands-on expertise, every device is handled with care and precision. Our focus on transparency, reliability, and professional service has made PodStore Electronics a trusted and genuine choice for retro audio and classic device enthusiasts.
+  </p>
 </section>
 
-<!-- ===== FOOTER ===== -->
-<footer class="site-footer">
-  <p>© Podstore Electronics • Chennai, India</p>
+<footer class="footer">
+  © <span id="year"></span> PodStore Electronics • Chennai, Tamil Nadu
 </footer>
+<a href="https://wa.me/919003028687" 
+   class="whatsapp-float" 
+   target="_blank" 
+   aria-label="Chat on WhatsApp">
 
-<script src="assets/js/main.js"></script>
+  <img src="images/WhatsApp.svg" alt="WhatsApp">
+
+</a>
+<script src="script.js" defer></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
