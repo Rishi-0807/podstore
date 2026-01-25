@@ -1376,4 +1376,37 @@ header .brand img.brand-logo {
   }
 }
 
+/* ===== ABOUT PAGE TRUE MOBILE FIX ===== */
+
+@media (max-width: 768px) {
+
+  .about-section {
+    padding: 20px 14px !important;
+  }
+
+  .about-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 24px !important;
+  }
+
+  .about-text {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .about-text p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .about-image {
+    width: 200px !important;
+    max-width: 200px !important;
+    margin: 0 auto !important;
+  }
+}
+
 
