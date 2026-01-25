@@ -1340,4 +1340,40 @@ header .brand img.brand-logo {
   }
 }
 
+/* ===== ABOUT PAGE MOBILE FIX (FINAL) ===== */
+
+@media (max-width: 768px) {
+
+  /* Force true vertical layout */
+  .about-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 28px !important;
+    text-align: center !important;
+  }
+
+  /* Fix text width */
+  .about-text {
+    max-width: 100% !important;
+  }
+
+  .about-text p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* Fix logo/video box */
+  .about-image {
+    margin: 0 auto !important;
+    max-width: 220px !important;
+    width: 100% !important;
+  }
+
+  /* Fix logo video scaling */
+  .logo-video {
+    transform: scale(1) !important;
+  }
+}
+
 
