@@ -308,3 +308,20 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 4000);
 });
 
+// ===== MOBILE MENU TOGGLE =====
+const menuBtn = document.querySelector(".menu-toggle");
+const mobileMenu = document.getElementById("mobileMenu");
+
+if (menuBtn && mobileMenu) {
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("active");
+  });
+
+  // Close menu on link click
+  mobileMenu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+    });
+  });
+}
+

@@ -30,17 +30,6 @@ body {
   padding: 20px;
 }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.brand1 {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
 
 .logo {
   width: 44px;
@@ -807,18 +796,6 @@ body {
 }
 
 
-/* Brand */
-.brand h1 {
-  font-size: 50px;
-  letter-spacing: 1px;
-  margin: 0;
-}
-
-.brand .tagline {
-  font-size: 12px;
-  opacity: 0.7;
-  margin-top: 4px;
-}
 
 /* Navigation */
 .nav {
@@ -838,42 +815,6 @@ body {
   color: var(--accent);
 }
 
-.brand {
-  position: relative;
-  height: 64px;              /* same as header height */
-  display: flex;
-  align-items: center;
-}
-
-.brand-logo {
-  position: absolute;        /* 👈 KEY FIX */
-  left: 20%;
-  top: 50%;
-
-  height: 120px;              /* 👈 VISUAL SIZE */
-  width: auto;
-
-  transform: translateY(-50%);
-  object-fit: contain;
-}
-
-@media (max-width: 900px) {
-  .header-inner {
-    height: 56px;
-  }
-
-  .brand {
-    height: 56px;
-  }
-
-  .brand-logo {
-    height: 48px;
-  }
-
-  .tagline {
-    display: none;           /* cleaner on mobile */
-  }
-}
 
 /* ===== PAGE SPACING FIX (DO NOT REMOVE) ===== */
 .page-content {
@@ -882,9 +823,6 @@ body {
 
 
 
-/* ===== HEADER VISUAL BALANCE FIX ===== */
-
-/* ===== GLOBAL HEADER OFFSET (ALL PAGES SAME) ===== */
 .page-start {
   padding-top: 64px; /* same as header-inner height */
 }
@@ -1095,3 +1033,311 @@ body {
   display: block;
   transform: scale(2)
 }
+
+
+/* ===== MOBILE NAV STACK ===== */
+
+@media (max-width: 768px) {
+  .nav {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .nav a {
+    font-size: 13px;
+    margin: 0;
+    padding: 6px 0;
+  }
+}
+
+/* ===== HERO MOBILE OPTIMIZATION ===== */
+
+@media (max-width: 768px) {
+  .hero-container {
+    padding: 30px 20px;
+    gap: 24px;
+  }
+
+  .hero-text h1 {
+    font-size: 26px;
+  }
+
+  .hero-text h2 {
+    font-size: 20px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image img {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+}
+
+/* ===== SECTION MOBILE SPACING ===== */
+
+@media (max-width: 600px) {
+  .section {
+    padding: 26px 16px;
+    margin: 30px 12px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+}
+
+/* ===== PRODUCT CARD MOBILE FIX ===== */
+
+@media (max-width: 600px) {
+  .product-card {
+    max-width: 100%;
+  }
+
+  .product-card img {
+    height: 180px;
+  }
+
+  select {
+    font-size: 14px;
+  }
+
+  .price {
+    font-size: 18px;
+  }
+}
+
+/* ===== CATEGORY GRID MOBILE TEXT ===== */
+
+@media (max-width: 500px) {
+  .exact-card span {
+    font-size: 20px;
+  }
+
+  .exact-category-grid {
+    gap: 14px;
+  }
+}
+
+/* ===== WHATSAPP SAFE AREA ===== */
+
+@media (max-width: 600px) {
+  .whatsapp-float {
+    bottom: 14px;
+    right: 14px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .whatsapp-float img {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+/* ===== HOME MOBILE REORDER (PRO LEVEL) ===== */
+
+@media (max-width: 768px) {
+
+  /* Make hero stack cleanly */
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* 1️⃣ Show image first */
+  .hero-image {
+    order: 1;
+    margin-bottom: 14px;
+  }
+
+  /* 2️⃣ Headings next */
+  .hero-text h1 {
+    order: 2;
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+
+  .hero-text h2 {
+    order: 3;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  /* 3️⃣ Short description */
+  .hero-text p {
+    order: 4;
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 90%;
+    margin: 0 auto 14px;
+  }
+
+  /* 4️⃣ CTA buttons early */
+  .hero-buttons {
+    order: 5;
+    margin-bottom: 18px;
+  }
+
+  /* 5️⃣ Bullets last */
+  .hero-points {
+    order: 6;
+    margin-top: 12px;
+  }
+}
+
+/* ===== MOBILE VISUAL CALM ===== */
+
+@media (max-width: 768px) {
+
+  /* Soften hero image */
+  .hero-image img {
+    animation: none;
+    transform: none;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.4);
+  }
+
+  /* Reduce motion distractions */
+  body {
+    animation: none;
+  }
+
+  .product-card:hover,
+  .review-card:hover {
+    transform: none;
+  }
+}
+
+/* ===== HOME SECTION SPACING FIX ===== */
+
+@media (max-width: 768px) {
+  .section.light {
+    margin-top: 60px;
+  }
+}
+
+/* ===== HAMBURGER MENU ===== */
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* Mobile Menu Panel */
+.mobile-menu {
+  position: fixed;
+  top: 64px;
+  right: -100%;
+  width: 220px;
+  height: calc(100vh - 64px);
+  background: rgba(10,10,10,0.95);
+  backdrop-filter: blur(14px);
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 18px;
+  transition: right 0.35s ease;
+  z-index: 100;
+}
+
+.mobile-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Active State */
+.mobile-menu.active {
+  right: 0;
+}
+
+/* ===== MOBILE ONLY ===== */
+
+@media (max-width: 768px) {
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.menu-toggle span {
+  transition: all 0.3s ease;
+}
+
+/* ===== FINAL MOBILE NAV VISIBILITY FIX ===== */
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none !important;
+  }
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* ===== LOGO FINAL STABILITY FIX ===== */
+
+/* Header layout */
+.header-inner,
+.header-inner1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* ===== LOGO SIZE – BALANCED & PROFESSIONAL ===== */
+
+header .brand img.brand-logo {
+  height: 120px !important;     /* ⬅ DESKTOP SIZE */
+  width: auto !important;
+  max-width: 1000px !important;
+  object-fit: contain !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  header .brand img.brand-logo {
+    height: 46px !important;   /* ⬅ MOBILE SIZE */
+    max-width: 160px !important;
+  }
+}
+
+
