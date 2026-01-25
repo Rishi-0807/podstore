@@ -278,12 +278,12 @@ const revealOnScroll = () => {
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
 
-// ===== HERO IMAGE FADE FIX (WORKING) =====
+// ===== HERO IMAGE : WORKING VERTICAL SLIDE =====
 document.addEventListener("DOMContentLoaded", () => {
   const heroImg = document.getElementById("heroImage");
   if (!heroImg) return;
 
-  const heroImages = [
+  const images = [
     "images/ipod-hero.png",
     "images/ipod-hero-2.png",
     "images/ipod-hero-3.png"
@@ -292,13 +292,19 @@ document.addEventListener("DOMContentLoaded", () => {
   let index = 0;
 
   setInterval(() => {
+    // slide current image down & fade
+    heroImg.classList.remove("fade-in");
     heroImg.classList.add("fade-out");
 
     setTimeout(() => {
-      index = (index + 1) % heroImages.length;
-      heroImg.src = heroImages[index];
+      // change image when hidden
+      index = (index + 1) % images.length;
+      heroImg.src = images[index];
+
+      // reset position for next image
       heroImg.classList.remove("fade-out");
       heroImg.classList.add("fade-in");
     }, 600);
-  }, 3500);
+  }, 4000);
 });
+
